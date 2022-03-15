@@ -1,0 +1,19 @@
+import random
+number=random.randint(1,20)
+x=int(input('How many plays do you want to use? : '))
+play=x
+counter=0
+while play>0:
+    play-=1
+    counter+=1
+    guess=int(input('Guess: '))
+
+    if number==guess:
+        print(f'Congratulations you know for the {counter}th time.Total Score :  {100-(100/x)*(counter-1)} ')
+        break
+    elif number>guess:
+        print('Up')
+    else:
+        print('Down')
+    if play==0:
+        print(f'Game Over. Number : {number} ')
